@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reddit-clone-deployment
+  name: reddit-app-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reddit-clone-app
+      app: reddit-app
   template:
     metadata:
       labels:
-        app: reddit-clone-app
+        app: reddit-app
     spec:
       containers:
-        - name: reddit-clone-app
+        - name: reddit-app
           image: mshow1980/reditt-app:1.0.0-11
           resources:
             limits:
@@ -29,12 +29,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: reddit-clone-service
+  name: reddit-app-service
   labels:
-    app: reddit-clone-app 
+    app: rreddit-app 
 spec:
   selector:
-    app: reddit-clone-app
+    app: reddit-app
 
   ports:
     - port: 3000
