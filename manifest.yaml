@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: reddit-app
-          image: mshow1980/tuesday_app:1.5-8
+          image: mshow1980/tuesday_app:1.5-11
           resources:
             limits:
               cpu: "1"
